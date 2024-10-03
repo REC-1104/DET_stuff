@@ -1,4 +1,4 @@
-# Line Fitting with Maximum Likelihood Estimation (MLE) and Cramér-Rao Lower Bound (CRLB)
+# Line Fitting Example with Maximum Likelihood Estimation (MLE) and Cramér-Rao Lower Bound (CRLB)
 
 This project demonstrates the application of Maximum Likelihood Estimation (MLE) to estimate the slope and intercept of a linear model. Additionally, the Cramér-Rao Lower Bound (CRLB) is used to verify the efficiency of the estimators.
 
