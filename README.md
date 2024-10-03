@@ -21,14 +21,15 @@ This notebook calculates the MLE of the parameters \( A \) (intercept) and \( B 
 ## Steps and Methodology
 
 ### 1. MLE Computation
-- **MLE for \( B \)** (slope) is computed using:
-  \[
-  B_{\text{MLE}} = \frac{\sum(x - \bar{x})(n - \bar{n})}{\sum(n - \bar{n})^2}
-  \]
-- **MLE for \( A \)** (intercept) is computed as:
-  \[
-  A_{\text{MLE}} = \bar{x} - B_{\text{MLE}} \times \bar{n}
-  \]
+
+- MLE for **B** (slope) is computed using:
+  
+  B_MLE = [ Σ(x - x̄)(n - n̄) ] / [ Σ(n - n̄)² ]
+
+- MLE for **A** (intercept) is computed as:
+
+  A_MLE = x̄ - B_MLE * n̄
+
 
 ### 2. CRLB Computation
 - The Fisher Information Matrix (FIM) is calculated based on the data.
