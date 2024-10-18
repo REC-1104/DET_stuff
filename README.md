@@ -3,7 +3,7 @@
 This project evaluates the performance of estimators for the intercept (A) and slope (B) parameters in a linear regression model. Specifically, it compares the **Mean Squared Error (MSE)** of the estimates to the **Cramér-Rao Lower Bound (CRLB)**, which provides the theoretical lower bound for the variance of any unbiased estimator. By doing so, the efficiency and consistency of the estimators are demonstrated.
 
 ## Table of Contents
-- [Project Overview](#Project-Overview)
+- [Project Overview](#project-overview)
 - [Steps and Methodology](#steps-and-methodology)
 - [Results](#results)
 - [Requirements](#requirements)
@@ -13,11 +13,11 @@ This project evaluates the performance of estimators for the intercept (A) and s
 
 The project simulates a dataset where the true relationship between variables follows a linear model: 
 
-\[ y = A_{\text{true}} + B_{\text{true}} \times x + \text{noise} \]
+$$ y = A_{\text{true}} + B_{\text{true}} \times x + \text{noise} $$
 
 where:
-- \( A_{\text{true}} = 2.0 \) (intercept)
-- \( B_{\text{true}} = 1.0 \) (slope)
+- A_true = 2.0 (intercept) 
+- B_true = 1.5 (slope)
 - Noise is generated using a Gaussian distribution.
 
 ### Key Steps:
@@ -28,7 +28,7 @@ where:
 5. **Visualization**: The MSE and CRLB for both intercept and slope are plotted as a function of the number of experiments.
 
 ### Key Objectives:
-- Compute MLE for slope (\( B \)) and intercept (\( A \))
+- Compute MLE for slope (B) and intercept (A)
 - Compute the Cramér-Rao Lower Bound (CRLB) for both parameters
 - Compare the MLE estimates against the CRLB to evaluate their efficiency
 
@@ -60,7 +60,7 @@ where:
 ## Requirements
 
 To run the notebook, you will need:
-- Python 3.x
+- Python3
 - NumPy
 - Matplotlib
 - Jupyter Notebook
