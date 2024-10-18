@@ -69,7 +69,7 @@ To run the notebook, you will need:
 
 1. Clone the repository.
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/REC-1104/DET_stuff.git
     ```
 2. Install the necessary Python packages.
     ```bash
@@ -77,5 +77,5 @@ To run the notebook, you will need:
     ```
 3. Open the Jupyter notebook and run the cells to reproduce the results.
     ```bash
-    jupyter notebook line_fitting.ipynb
+    jupyter notebook main.ipynb
     ```
