@@ -1,17 +1,31 @@
-# Line Fitting Example with Maximum Likelihood Estimation (MLE) and Cramér-Rao Lower Bound (CRLB)
+# Line Fitting: MSE vs CRLB Analysis
 
-This project demonstrates the application of Maximum Likelihood Estimation (MLE) to estimate the slope and intercept of a linear model. Additionally, the Cramér-Rao Lower Bound (CRLB) is used to verify the efficiency of the estimators.
+This project evaluates the performance of estimators for the intercept (A) and slope (B) parameters in a linear regression model. Specifically, it compares the **Mean Squared Error (MSE)** of the estimates to the **Cramér-Rao Lower Bound (CRLB)**, which provides the theoretical lower bound for the variance of any unbiased estimator. By doing so, the efficiency and consistency of the estimators are demonstrated.
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Project Overview](#Project-Overview)
 - [Steps and Methodology](#steps-and-methodology)
 - [Results](#results)
 - [Requirements](#requirements)
 - [Usage](#usage)
 
-## Introduction
+## Project Overview
 
-This notebook calculates the MLE of the parameters \( A \) (intercept) and \( B \) (slope) for a line-fitting problem. The CRLB is then computed to check if the estimators are efficient. The theoretical bounds on the variance of the estimators are derived using the Fisher Information Matrix (FIM).
+The project simulates a dataset where the true relationship between variables follows a linear model: 
+
+\[ y = A_{\text{true}} + B_{\text{true}} \times x + \text{noise} \]
+
+where:
+- \( A_{\text{true}} = 2.0 \) (intercept)
+- \( B_{\text{true}} = 1.0 \) (slope)
+- Noise is generated using a Gaussian distribution.
+
+### Key Steps:
+1. **Simulated Data Generation**: Data points are created based on the true linear model with added Gaussian noise.
+2. **Parameter Estimation**: The intercept and slope are estimated from the noisy data using the `np.polyfit()` function.
+3. **MSE Calculation**: The MSE of the estimates is computed by comparing them to the true values.
+4. **CRLB Values**: The theoretical CRLB values for the intercept and slope are provided for comparison.
+5. **Visualization**: The MSE and CRLB for both intercept and slope are plotted as a function of the number of experiments.
 
 ### Key Objectives:
 - Compute MLE for slope (\( B \)) and intercept (\( A \))
@@ -37,14 +51,9 @@ This notebook calculates the MLE of the parameters \( A \) (intercept) and \( B 
 
 ### 3. Comparison
 - The MLE results for \( A \) and \( B \) are compared to their true values.
-- Errors and variances are computed and compared with the CRLB.
+- MSE is computed for 1e4 experiments and compared with the CRLB.
 
 ## Results
-
-| Parameter | MLE Estimate | True Value | Percentage Error | CRLB Variance |
-|-----------|--------------|------------|------------------|---------------|
-| A (intercept) | 2.0019       | 2.0        | 0.1928%          | 0.019985      |
-| B (slope)     | 1.50005      | 1.5        | 0.0052%          | \(1.5 * 10^{-8}\) |
 
 - The MLE estimates for both \( A \) and \( B \) fall within the bounds established by the CRLB, confirming the efficiency of the estimators.
 
