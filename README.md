@@ -55,6 +55,11 @@ where:
 
 ## Results
 
+<p float="left">
+<img src="./assets/img/MSE_A.png" alt="MSE_A" style="width:500px; height:300px;"/>
+<img src="./assets/img/MSE_B.png" alt="MSE_B" style="width:500px; height:300px;"/>
+</p>
+
 - The MLE estimates for both \( A \) and \( B \) fall within the bounds established by the CRLB, confirming the efficiency of the estimators.
 
 ## Requirements
