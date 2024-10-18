@@ -60,7 +60,10 @@ where:
 <img src="./assets/img/MSE_B.png" alt="MSE_B" style="width:500px; height:300px;"/>
 </p>
 
-- The MLE estimates for both \( A \) and \( B \) fall within the bounds established by the CRLB, confirming the efficiency of the estimators.
+- **Intercept A (CRLB ≈ 0.019985)**: The MSE for the intercept decreases and approaches the CRLB as the number of experiments increases.
+- **Slope B (CRLB ≈ 1.5 × 10⁻⁸)**: Similarly, the MSE for the slope decreases and stabilizes near the CRLB as more data is gathered.
+
+This behavior demonstrates that the estimators for both A and B are **efficient** and **consistent**, with their MSE values approaching the CRLB when enough data is used.
 
 ## Requirements
 
